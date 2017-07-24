@@ -32,10 +32,13 @@ export const diff = (a: string, b: string) =>
 export const diffNow = (val: string) =>
     toMoment(val).diff(moment(new Date()))
 
-export const toUtc = (val: string) => {
-    return moment.utc(new Date(val)).format()
-}
+export const toUtc = (val: string) =>
+    moment.utc(new Date(val)).format()
+
 
 // as far as I can tell this method is inferior to the one above
 // export const withUtcOffset = (val: string) =>
 //     moment(val).add(utcOffset() * -1, 'minutes').format()
+
+export const fromUtc = (val: string) =>
+    moment(new Date(val)).local().format()
