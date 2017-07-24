@@ -6,7 +6,7 @@ export const TIME_FILTER_FORMAT: string = 'HH:mm'
 export const utcOffset = (): number =>
     moment.parseZone(new Date()).utcOffset()
 
-// Createing a moment from a date object because we know that the format
+// Creating a moment from a date object because we know that the format
 // of our date is an iso 8601 string. This is much faster than having
 // moment parse the string itself
 const toMoment = (val: string) => moment(new Date(val))
@@ -34,11 +34,6 @@ export const diffNow = (val: string) =>
 
 export const toUtc = (val: string) =>
     moment.utc(new Date(val)).format()
-
-
-// as far as I can tell this method is inferior to the one above
-// export const withUtcOffset = (val: string) =>
-//     moment(val).add(utcOffset() * -1, 'minutes').format()
 
 export const fromUtc = (val: string) =>
     moment(new Date(val)).local().format()
