@@ -1,0 +1,6 @@
+/object
+/node_modules
+/build
+/bundle
+/.idea
+/tsconfig.json

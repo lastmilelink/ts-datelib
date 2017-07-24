@@ -1,0 +1,49 @@
+{
+  "name": "ts-datelib",
+  "version": "1.0.0",
+  "description": "Typescript date formatting",
+  "main": "dist/datelib.js",
+  "scripts": {
+    "start": "tsc --watch --pretty",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lastmilelink/ts-datelib.git"
+  },
+  "author": "Rob Tucker <rob@coderlab.co.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lastmilelink/ts-datelib/issues"
+  },
+  "homepage": "https://github.com/lastmilelink/ts-datelib#readme",
+  "devDependencies": {
+    "@types/jest": "^20.0.4",
+    "@types/node": "^8.0.16",
+    "jest": "^20.0.4",
+    "ts-jest": "^20.0.7",
+    "typescript": "^2.4.2"
+  },
+  "dependencies": {
+    "moment": "^2.18.1"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "test"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/mocks/file.js",
+      "\\.(scss|css|less)$": "identity-obj-proxy"
+    }
+  }
+}
