@@ -4,8 +4,10 @@
   "description": "Typescript date formatting",
   "main": "dist/datelib.js",
   "scripts": {
+    "prepublish": "npm run tsc:compile",
     "start": "tsc --watch --pretty",
-    "test": "jest"
+    "test": "jest",
+    "tsc:compile": "tsc"
   },
   "repository": {
     "type": "git",
