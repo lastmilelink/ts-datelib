@@ -39,6 +39,8 @@ export const toUtc = (val: string) =>
 export const fromUtc = (val: string) =>
     moment(new Date(val)).local().format()
 
+export const utcNow = () =>
+    moment.utc().toISOString()
 /**
  * Format required for datetime-local html input type
  *
